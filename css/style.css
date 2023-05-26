@@ -335,17 +335,11 @@ body, html {
   text-transform: uppercase;
   color: #FFFFFF;
   cursor: pointer;
+  text-decoration: none;
   position: relative;
-  left: -3px;
 }
 .banner-call__btn:hover {
   opacity: 0.7;
-}
-@media screen and (max-width: 1000px) {
-  .banner-call__btn {
-    left: 0;
-    margin-top: 15px;
-  }
 }
 .banner-call__copyright {
   font-weight: 500;
