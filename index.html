@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet" />
-    <script src="js/main.js" type="text/javascript"></script>
+    <link href="css/lightbox.min.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="header__item">
+                <div class="header__item header__item--mobile-hidden">
                     <div class="header__icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 0C5.87827 1.32608e-07 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 1.32608e-07 5.87827 0 8C1.32608e-07 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 1.32608e-07 8 0ZM8 1.42383C8.277 1.42383 8.5 1.60826 8.5 1.8374V5.9125C8.5 6.78925 9.21075 7.5 10.0875 7.5H12.8628C13.0983 7.5 13.2881 7.723 13.2881 8C13.2881 8.277 13.0983 8.5 12.8628 8.5H8.70062C8.46565 8.5 8.23497 8.61035 8 8.61035C7.89932 8.61035 7.80616 8.58572 7.7282 8.54345C7.60994 8.47935 7.51048 8.37602 7.44955 8.2561C7.41153 8.18129 7.38965 8.09374 7.38965 8C7.38965 7.76808 7.5 7.54084 7.5 7.30893V1.8374C7.5 1.60826 7.723 1.42383 8 1.42383Z" fill="white"/>
@@ -37,11 +37,11 @@
                     <div class="header__work">Работаем <br>круглосуточно 24/7</div>
                 </div>
                 <div class="header__item">
-                    <div class="header__icon">
+                    <a href="tel:+375333330303" class="header__icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.462435 5.43432C-0.437392 2.96959 0.102504 1.34647 1.00233 0.504857C1.90216 -0.336758 2.2021 0.023934 2.80198 0.504857C3.40187 1.0459 5.3215 2.90947 5.3215 2.90947C5.3215 2.90947 5.92138 3.33028 5.38149 4.05166C4.90158 4.83316 3.64182 5.3742 4.60164 6.5164C6.16134 8.37997 7.60106 9.88286 9.52069 11.3857C10.6605 12.3476 11.2004 11.1453 11.9202 10.6042C12.6401 10.0632 13.12 10.6644 13.12 10.6644C13.12 10.6644 14.9796 12.588 15.4595 13.1892C15.9395 13.7904 16.3594 14.151 15.5195 15.0528C14.6797 15.8944 13 16.4354 10.5405 15.5337C7.48108 14.3915 1.6622 8.56032 0.462435 5.43432ZM7.06116 2.6089C6.22132 2.6089 6.28131 1.40659 7.06116 1.40659C11.2004 1.34647 14.6197 4.77305 14.6197 8.98113C14.6197 9.76263 13.4199 9.76263 13.4199 8.98113C13.4199 5.43432 10.5405 2.54878 7.06116 2.6089ZM8.08097 5.3742C7.30112 5.3742 7.30112 4.1719 8.08097 4.1719C10.1206 4.1719 11.8003 5.85513 11.8003 7.89905C11.8003 8.68055 10.6005 8.68055 10.6005 7.89905C10.6005 6.5164 9.4607 5.3742 8.08097 5.3742Z" fill="white"/>
                         </svg>
-                    </div>
+                    </a>
                     <a href="tel:+375333330303" class="header__phone">+375(33) 333 03 03</a>
                 </div>
                 <div class="header__item">
@@ -54,7 +54,7 @@
         <div class="banner__container container">
             <div class="banner__wrapp">
                 <h1 class="banner__title">Круглосуточная <br>служба эвакуации</h1>
-                <div class="banner__subtitle">Москва / Московская область / Россия</div>
+                <div class="banner__subtitle">Брест / Брестская область / Беларусь</div>
                 <div class="banner__call banner-call">
                     <div class="banner-call__title">ОБРАТНЫЙ ЗВОНОК / ВЫЗВАТЬ ЭВАКУАТОР :</div>
                     <div class="banner-call__subtitle">Мы перезвоним в течении 10 минут!</div>
@@ -260,29 +260,53 @@
     </section>
     <section class="work">
         <div class="container">
+            <div class="work__title title">
+                Примеры эвакуации
+            </div>
             <div class="work__examples">
-                <div class="work__item">
-                    <img src="">
-                </div>
-                <div class="work__item">
-                    <img src="">
-                </div>
-                <div class="work__item">
-                    <img src="">
-                </div>
-                <div class="work__item">
-                    <img src="">
-                </div>
+                <a href="image/work1.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work1.jpg" alt="Эвакуатор авто d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work2.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work2.jpg" alt="Эвакуатор техники d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work3.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work3.jpg" alt="Эвакуатор авто d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work4.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work4.jpg" alt="Эвакуатор машины d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work5.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work5.jpg" alt="Эвакуатор техники d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work6.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work6.jpg" alt="Эвакуатор машины d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work7.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work7.jpg" alt="Эвакуатор машины d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work8.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work8.jpg" alt="Эвакуатор бусов d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work9.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work9.jpg" alt="Эвакуатор авто d4.by +375 (33) 333 03 03">
+                </a>
+                <a href="image/work10.jpg" data-lightbox="work" class="work__item">
+                    <img src="image/work10.jpg" alt="Эвакуатор бусов d4.by +375 (33) 333 03 03">
+                </a>
             </div>
         </div>
     </section>
     <footer class="footer">
         <div class="container">
             <div class="footer__flex">
-                <div>©2020 123 Служба ЭВАКУАции </div>
-                <div>Политика кофенденциональности </div>
+                <div>©2023 Служба "ЭВАКУАЦИИ" - Evakuator.d4.by</div>
+                <a href="https://d4.by/privacy">Политика конфиденциальности</a>
             </div>
         </div>
     </footer>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/lightbox.min.js" type="text/javascript"></script>
 </body>
 </html>

@@ -6,12 +6,20 @@ body, html {
 
 * {
   box-sizing: border-box;
+  transition: 0.5s all;
+}
+
+.lb-number {
+  display: none !important;
 }
 
 .container {
   max-width: 1330px;
   width: 100%;
   margin: 0 auto;
+  @media screen and (max-width: 1457px) {
+    padding: 0 15px;
+  }
 }
 
 .title {
@@ -20,6 +28,12 @@ body, html {
   line-height: 37px;
   color: #333333;
   text-align: center;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 26px;
+    line-height: 30px;
+    text-align: left;
+  }
 }
 
 .btn {
@@ -35,6 +49,11 @@ body, html {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &:hover {
+    background: #2BA472;
+    color: #ffffff;
+  }
 }
 
 .header {
@@ -55,6 +74,18 @@ body, html {
   &__item {
     display: flex;
     align-items: center;
+    
+    &--mobile-hidden {
+      @media screen and (max-width: 1240px) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
   }
 
   &__wrap {
@@ -62,6 +93,9 @@ body, html {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    @media screen and (max-width: 1000px) {
+      height: 70px;
+    }
   }
 
   &__work {
@@ -77,6 +111,10 @@ body, html {
     font-size: 24px;
     line-height: 29px;
     color: #4F4F4F;
+    @media screen and (max-width: 1000px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -90,6 +128,9 @@ body, html {
     font-size: 53.2572px;
     line-height: 65px;
     color: #2BA472;
+    @media screen and (max-width: 1240px) {
+      display: none;
+    }
   }
 
   &__text {
@@ -100,6 +141,9 @@ body, html {
     text-transform: uppercase;
     color: #333333;
     margin-left: 5px;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
 
   &__city {
@@ -109,6 +153,12 @@ body, html {
     color: #828282;
     margin-left: 10px;
     padding-left: 10px;
+    @media screen and (max-width: 1000px) {
+      padding-left: 0;
+      margin-left: 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -117,6 +167,14 @@ body, html {
   padding-top: 64px;
   border-bottom: 1px solid #F2F2F2;
   min-height: 600px;
+  @media screen and (max-width: 1670px) {
+    min-height: 533px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   &__title {
     font-weight: 900;
@@ -124,6 +182,11 @@ body, html {
     line-height: 73px;
     color: #333333;
     margin: 0;
+    @media screen and (max-width: 1000px) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-top: 10px;
+    }
   }
 
   &__subtitle {
@@ -133,12 +196,45 @@ body, html {
     line-height: 24px;
     text-transform: uppercase;
     color: #4F4F4F;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 15px;
+      margin-top: 14px;
+      line-height: 20px;
+    }
   }
 
   &__image {
     position: absolute;
     right: 0;
     top: 0;
+    @media screen and (max-width: 1457px) {
+      bottom: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (max-width: 1000px) {
+      position: static;
+    }
+  }
+}
+
+.banner-image {
+  &__link {
+    @media screen and (max-width: 1670px) {
+      width: 900px;
+    }
+    @media screen and (max-width: 1457px) {
+      width: 800px;
+    }
+    @media screen and (max-width: 1240px) {
+      display: none;
+    }
+    @media screen and (max-width: 1000px) {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -149,12 +245,20 @@ body, html {
   border-radius: 6px;
   max-width: 630px;
   margin-top: 40px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 20px;
+    padding: 20px;
+  }
 
   &__title {
     font-weight: 700;
     font-size: 16px;
     line-height: 26px;
     color: #4F4F4F;
+    @media screen and (max-width: 1000px) {
+      font-size: 14px;
+      line-height: 26px;
+    }
   }
 
   &__subtitle {
@@ -162,11 +266,18 @@ body, html {
     font-size: 16px;
     line-height: 26px;
     color: #4F4F4F;
+    @media screen and (max-width: 1000px) {
+      font-size: 14px;
+      line-height: 26px;
+    }
   }
 
   &__form {
     display: flex;
     margin-top: 20px;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -180,6 +291,11 @@ body, html {
     border: 1px solid #E0E0E0;
     border-radius: 6px 0 0 6px;
     outline: none;
+    @media screen and (max-width: 1000px) {
+      font-size: 14px;
+      line-height: 26px;
+      width: 100%;
+    }
 
     &::placeholder {
       color: #828282;
@@ -202,6 +318,14 @@ body, html {
     cursor: pointer;
     position: relative;
     left: -3px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @media screen and (max-width: 1000px) {
+      left: 0;
+      margin-top: 15px;
+    }
   }
 
   &__copyright {
@@ -210,6 +334,9 @@ body, html {
     line-height: 23px;
     color: #BDBDBD;
     margin-top: 13px;
+    @media screen and (max-width: 1000px) {
+      line-height: 15px;
+    }
   }
 }
 
@@ -225,11 +352,29 @@ body, html {
     font-size: 14px;
     line-height: 23px;
     color: #BDBDBD;
+
+    a {
+      color: #BDBDBD;
+      text-decoration: none;
+      border-bottom:1px solid transparent;
+
+      &:hover {
+        border-bottom:1px solid #BDBDBD;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 
 .price {
   padding: 60px 0 70px;
+  @media screen and (max-width: 1000px) {
+    padding: 35px 0 50px;
+  }
 
   &__wrapp {
     margin-top: 40px;
@@ -240,6 +385,9 @@ body, html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .price-wrapp-item {
@@ -278,6 +426,7 @@ body, html {
     font-weight: 700;
     font-size: 16px;
     line-height: 26px;
+    cursor: pointer;
     text-transform: uppercase;
     color: #FFFFFF;
     display: flex;
@@ -286,6 +435,10 @@ body, html {
     height: 60px;
     width: 100%;
     margin-top: auto;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -298,6 +451,10 @@ body, html {
 .adv-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
 }
 
 .adv-item {
@@ -319,6 +476,9 @@ body, html {
     color: #4F4F4F;
     text-align: center;
     margin: 20px 0;
+    @media screen and (max-width: 1000px) {
+      margin: 15px 0 5px;
+    }
   }
 
   &__caption {
@@ -336,15 +496,28 @@ body, html {
   &__image {
     position: absolute;
     bottom: 0;
+    @media screen and (max-width: 1000px) {
+      position: static;
+    }
 
     img {
       display: block;
+      @media screen and (max-width: 1240px) {
+        display: none;
+      }
+      @media screen and (max-width: 1000px) {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
   &__content {
     margin-left: auto;
     margin-right: 120px;
+    @media screen and (max-width: 1240px) {
+      margin-right: 0;
+    }
   }
 
   &__wrapp {
@@ -356,6 +529,10 @@ body, html {
     box-shadow: 0px 10px 20px rgba(118, 106, 106, 0.1);
     border-radius: 6px;
     align-items: center;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column-reverse;
+      height: auto;
+    }
   }
 }
 
@@ -363,6 +540,9 @@ body, html {
   &__w {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 
   &__phone {
@@ -372,6 +552,10 @@ body, html {
     color: #4F4F4F;
     margin-right: 20px;
     text-decoration: none;
+    @media screen and (max-width: 1000px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
@@ -381,9 +565,38 @@ body, html {
     color: #4F4F4F;
     max-width: 550px;
     margin-bottom: 30px;
+    @media screen and (max-width: 1000px) {
+      margin: 27px auto;
+      text-align: center;
+    }
 
     span {
       color: rgba(43, 164, 114, 1);
+    }
+  }
+}
+
+.work {
+  padding: 0 0 50px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__examples {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+    }
+  }
+
+  &__item {
+    img {
+      width: 100%;
+      display: block;
     }
   }
 }
