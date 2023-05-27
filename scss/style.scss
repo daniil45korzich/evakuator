@@ -80,12 +80,6 @@ body, html {
         display: none;
       }
     }
-
-    &:last-child {
-      @media screen and (max-width: 1000px) {
-        display: none;
-      }
-    }
   }
 
   &__wrap {

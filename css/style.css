@@ -81,11 +81,6 @@ body, html {
     display: none;
   }
 }
-@media screen and (max-width: 1000px) {
-  .header__item:last-child {
-    display: none;
-  }
-}
 .header__wrap {
   display: flex;
   justify-content: space-between;
